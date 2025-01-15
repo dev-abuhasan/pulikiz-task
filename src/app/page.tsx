@@ -43,12 +43,12 @@ const Home = () => {
 
       <div className="grid grid-cols-12 gap-4 mt-6 mx-0 lg:mx-6">
         <div className="col-span-12 xl:col-span-9 lg:col-span-7">
-          <div className="bg-gray-50 flex flex-wrap items-center justify-between px-4 py-3 rounded-lg overflow-hidden shadow-sm">
-            <h2 className="text-2xl font-semibold">Car Details</h2>
+          <div className="bg-gray-50 flex flex-wrap items-center justify-between px-4 pb-3 rounded-lg overflow-hidden shadow-sm">
+            <h2 className="text-2xl font-semibold mt-3">Car Details</h2>
             <div className="flex flex-wrap items-center justify-between space-4">
-              <button className="bg-dark text-light font-semibold rounded-full px-3 py-2">Your Details</button>
-              <button className="bg-none font-semibold rounded-full px-3 py-1">Booking Details</button>
-              <button className="bg-none font-semibold rounded-full px-3 py-1">Location</button>
+              <button className="bg-dark text-light font-semibold rounded-full px-3 py-2 mt-3">Your Details</button>
+              <button className="bg-none font-semibold rounded-full px-3 py-1  mt-3">Booking Details</button>
+              <button className="bg-none font-semibold rounded-full px-3 py-1  mt-3">Location</button>
             </div>
           </div>
           <div className="mt-2 bg-light rounded-lg overflow-hidden shadow-sm flex flex-col items-center justify-center px-0 md:px-10 md:flex-row">
@@ -67,7 +67,7 @@ const Home = () => {
               <span className="text-sm font-light mx-2">Taxi - Selected</span>
             </div>
           </div>
-          <div className="bg-light rounded-lg overflow-hidden shadow-sm mt-1 px-2 lg:px-14 py-5">
+          <div className="bg-light rounded-lg overflow-hidden shadow-sm mt-1 px-3 lg:px-14 py-5">
             <h1 className="text-3xl font-semibold">Your Details</h1>
             <p className="text-gray-400 font-light py-3">Whether you are in town for business or leisure, San Francisco Marriott Marquis welcomes travelers to Northern California with exceptional service, spacious</p>
             <div className="grid grid-cols-12 gap-4">
