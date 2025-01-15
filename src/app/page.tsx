@@ -8,27 +8,39 @@ const Home = () => {
   return (
     <div>
       <div className="bg-light px-4 py-5 rounded-b-3xl shadow-sm">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-4">
-          <CustomSelect />
-          <label htmlFor="" className="flex flex-col">
-            <span className="text-gray-400 uppercase">Form</span>
-            <input type="text" className="bg-gray-200 px-4 py-3 font-semibold rounded-full" placeholder="location" />
-          </label>
-          <label htmlFor="" className="flex flex-col">
-            <span className="text-gray-400 uppercase">To</span>
-            <input type="text" className="bg-gray-200 px-4 py-3 font-semibold rounded-full" placeholder="location" />
-          </label>
-          <label htmlFor="" className="flex flex-col">
-            <span className="text-gray-400 uppercase">To</span>
-            <input type="date" className="bg-gray-200 px-4 py-3 font-semibold rounded-full" />
-          </label>
-          <CustomSelect label="Pick-up Time" defaultSelected="03:00 AM" width />
-          <div className="hidden xl:flex" />
-          <div className="flex items-end mb-[2px]">
-            <button className="bg-error text-light font-semibold w-full rounded-full px-12 py-3">Search&nbsp;Flight</button>
+        <div className="grid grid-cols-12 gap-4">
+          <div className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 xl:col-span-2">
+            <CustomSelect />
+          </div>
+          <div className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 xl:col-span-2">
+            <label htmlFor="" className="flex flex-col">
+              <span className="text-gray-400 uppercase px-5">Form</span>
+              <input type="text" className="bg-gray-200 px-4 py-3 font-semibold rounded-full" placeholder="location" />
+            </label>
+          </div>
+          <div className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 xl:col-span-2">
+            <label htmlFor="" className="flex flex-col">
+              <span className="text-gray-400 uppercase px-5">To</span>
+              <input type="text" className="bg-gray-200 px-4 py-3 font-semibold rounded-full" placeholder="location" />
+            </label>
+          </div>
+          <div className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 xl:col-span-2">
+            <label htmlFor="" className="flex flex-col">
+              <span className="text-gray-400 uppercase px-5">To</span>
+              <input type="date" className="bg-gray-200 px-4 py-3 font-semibold rounded-full" />
+            </label>
+          </div>
+          <div className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 xl:col-span-2">
+            <CustomSelect label="Pick-up Time" defaultSelected="03:00 AM" width />
+          </div>
+          <div className="col-span-12 sm:col-span-6 md:col-span-4 lg:col-span-3 xl:col-span-2">
+            <div className="flex items-end h-full ml-0 xl:ml-8">
+              <button className="bg-error text-light font-semibold w-full rounded-full px-2 py-3 mb-[2px]">Search&nbsp;Flight</button>
+            </div>
           </div>
         </div>
       </div>
+
       <div className="grid grid-cols-12 gap-4 mt-6 mx-0 lg:mx-6">
         <div className="col-span-12 xl:col-span-9 lg:col-span-7">
           <div className="bg-gray-50 flex flex-wrap items-center justify-between px-4 py-3 rounded-lg overflow-hidden shadow-sm">
@@ -60,7 +72,7 @@ const Home = () => {
             <p className="text-gray-400 font-light py-3">Whether you are in town for business or leisure, San Francisco Marriott Marquis welcomes travelers to Northern California with exceptional service, spacious</p>
             <div className="grid grid-cols-12 gap-4">
               <div className="col-span-12 xl:col-span-3">
-                <CustomSelect rounded="rounded-lg" label="Title" uppercase="capitalize" />
+                <CustomSelect padding rounded="rounded-lg" label="Title" uppercase="capitalize" />
               </div>
               <div className="col-span-12  md:col-span-6 xl:col-span-5">
                 <label htmlFor="" className="flex flex-col">
@@ -81,7 +93,7 @@ const Home = () => {
                 </label>
               </div>
               <div className="col-span-12 xl:col-span-4">
-                <CustomSelect rounded="rounded-lg" label="Title" uppercase="capitalize" />
+                <CustomSelect rounded="rounded-lg" padding="" label="Title" uppercase="capitalize" />
               </div>
               <div className="col-span-12 xl:col-span-8">
                 <label htmlFor="" className="flex flex-col">
@@ -91,11 +103,11 @@ const Home = () => {
               </div>
               <div className="col-span-12">
                 <label htmlFor="" className="flex flex-col bg-blue-50 rounded-lg p-5">
-                  <div>
-                    <span className="text-brand">{v1_check_box}</span>
-                    I have coupon
+                  <div className="flex items-center">
+                    <span className="text-brand mr-2">{v1_check_box}</span>
+                    <span className="font-semibold">I have coupon</span>
                   </div>
-                  <input type="text" className="py-3 focus:outline-none bg-transparent border-b !focus:border-b" placeholder="Enter your coupon number" />
+                  <input type="text" className="py-3 ml-8 focus:outline-none bg-transparent border-b !focus:border-b" placeholder="Enter your coupon number" />
                 </label>
                 <br />
               </div>
