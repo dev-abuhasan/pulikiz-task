@@ -9,6 +9,9 @@ export default {
   theme: {
     extend: {
       colors: {
+        backgroundImage: {
+          'header-bg': "url('@/services/image/bg/header-banner.jpg')",
+        },
         brand: 'var(--brand)',
         info: 'var(--info)',
         secondary: 'var(--secondary)',
