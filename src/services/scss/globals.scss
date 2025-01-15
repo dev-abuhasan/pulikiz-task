@@ -1,0 +1,106 @@
+@use "tailwindcss/base";
+@use "tailwindcss/components";
+@use "tailwindcss/utilities";
+
+@use "./variables.scss";
+
+:root {
+    --brand: #{variables.$brand};
+    --info: #{variables.$info};
+    --secondary: #{variables.$secondary};
+    --success: #{variables.$success};
+    --warning: #{variables.$warning};
+    --error: #{variables.$error};
+    --dark: #{variables.$dark};
+    --bg_dark: #{variables.$bg_dark};
+    --card_dark: #{variables.$card_dark};
+    --light: #{variables.$light};
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground: var(--light);
+    }
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+
+    ::selection {
+        background: var(--brand);
+        color: var(--light);
+    }
+
+    &::-webkit-scrollbar {
+        // background-color: rgba($color: variables.$secondary, $alpha: 1);
+        width: 0px;
+        // height: auto;
+    }
+    // &::-webkit-scrollbar-thumb {
+    //     background-color: rgba($color: variables.$brand, $alpha: 1);
+    //     width: 5px;
+    //     border-radius: 4px;
+    //     height: auto;
+    // }
+}
+.transparent_scrollbar {
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    &::-webkit-scrollbar-thumb {
+        width: 0;
+    }
+    scrollbar-width: 0;
+}
+
+// .main_input {
+//     input {
+//         background-color: transparent !important;
+//         &:-webkit-autofill {
+//             background-color: transparent !important;
+//             box-shadow: none !important;
+//             color: inherit;
+//             transition: background-color 5000s ease-in-out 0s;
+//         }
+
+//         &:-moz-autofill {
+//             box-shadow: none !important;
+//             background-color: transparent !important;
+//             color: inherit;
+//             transition: background-color 5000s ease-in-out 0s;
+//         }
+//     }
+// }
+
+.light {
+    --background: var(--light);
+    --border: #d4d4d4;
+    --card: var(--light);
+
+    --copy-primary: var(--brand);
+    --copy-secondary: var(--secondary);
+
+    --cta: var(--info);
+    --cta-active: var(--success);
+    --cta-text: var(--dark);
+
+    color: var(--cta-text);
+    background: var(--background);
+}
+
+.dark {
+    --background: var(--bg_dark);
+    --border: var(--dark);
+    --card: var(--card_dark);
+
+    --copy-primary: var(--brand);
+    --copy-secondary: var(--secondary);
+
+    --cta: var(--info);
+    --cta-active: var(--success);
+    --cta-text: var(--light);
+
+    color: var(--cta-text);
+    background: var(--background);
+}

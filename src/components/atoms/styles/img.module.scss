@@ -1,0 +1,24 @@
+@mixin borderRadius($topLeft: 6px, $topRight: 6px, $bottomRight: 6px, $bottomLeft: 6px) {
+    border-top-left-radius: $topLeft;
+    border-top-right-radius: $topRight;
+    border-bottom-right-radius: $bottomRight;
+    border-bottom-left-radius: $bottomLeft;
+}
+
+.img_wrap {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // @include borderRadius;
+    overflow: hidden;
+
+    img {
+        position: relative !important;
+        object-fit: contain;
+        width: 100%;
+        height: auto;
+        // @include borderRadius;
+    }
+}

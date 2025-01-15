@@ -1,0 +1,64 @@
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error_main {
+    min-height: 100vh;
+    text-align: center;
+
+    h1 {
+        word-break: break-all;
+    }
+}
+
+.button_list {
+    @include flexCenter;
+
+    a,
+    button {
+        background-color: transparent;
+        border: none;
+        background-color: var(--brand);
+        padding: 10px;
+        margin: 0;
+        border-radius: 6px;
+        color: var(--light);
+        font-size: 12px;
+        font-weight: 600;
+        min-width: 40%;
+    }
+
+    a {
+        background-color: var(--brand);
+    }
+}
+
+.not_found_wrap {
+    @include flexCenter;
+    flex-direction: column;
+    min-height: 90vh;
+    text-align: center;
+
+    h1 {
+        font-size: 24px;
+        font-weight: bolder;
+    }
+    p {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    a {
+        background-color: var(--info);
+        padding: 10px;
+        color: var(--light);
+        border-radius: 6px;
+    }
+    .img_wrap {
+        img {
+            max-width: 300px;
+        }
+    }
+}
